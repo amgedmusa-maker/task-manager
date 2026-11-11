@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amjad Learning Tracker</title>
+    <link id="link" rel="stylesheet" href="C:\Users\win10\Desktop\RAMs\css\style.css">
+    <script src="Java/application.js" defer></script>
+</head>
+<body>
+    <header> 
+        <p class="eyebrow">Learning Project</p> 
+        <h1 id="title">Amjad Learning Tracker</h1> 
+        <p id="pageDescription"> Organize what you want to learn. </p> 
+    </header> 
+   
+    
+    <form id="taskForm"> 
+    <div>
+        <label for="taskTitle">Task title</label> 
+        <input type="text" id="taskTitle" name="taskTitle" > 
+    </div> 
+    <div> 
+        <label for="taskCategory">Category</label> 
+            <select id="taskCategory" name="taskCategory" > 
+                <option value="">Choose a category</option> 
+                <option value="HTML">HTML</option> 
+                <option value="CSS">CSS</option> 
+                <option value="JavaScript">JavaScript</option> 
+                <option value="General">General</option> 
+            </select> 
+    </div> 
+    <div> 
+        <label for="taskPriority">Priority</label> 
+            <select id="taskPriority" name="taskPriority"> 
+                <option value="">Choose priority</option> 
+                <option value="low">Low</option> 
+                <option value="medium" selected>Medium</option> 
+                <option value="high">High</option> 
+            </select> 
+    </div> 
+            <button type="submit">Add task</button> 
+            <p id="formMessage" type="text"></p>
+
+    <div>
+        <ul id="taskList"></ul>
+    </div>
+
+</form>
+
+    <section aria-label="Task controls"> 
+        <div> 
+            <label for="searchTasks">Search tasks</label> 
+            <input type="search" id="searchTasks" placeholder="Search by title" > 
+        </div> 
+    
+        <div> 
+        <label for="statusFilter">Filter by status</label>
+            <select id="statusFilter"> 
+                <option value="all">All tasks</option> 
+                <option value="active">Active</option> 
+                <option value="completed">Completed</option> 
+            </select> 
+        </div>
+    </section>
+
+    <section aria-label="Task statistics"> 
+                <p>Total: <strong id="totalTasks">0</strong></p> 
+                <p>Completed: <strong id="completedTasks">0</strong></p> 
+                <p>Remaining: <strong id="remainingTasks">0</strong></p>
+    </section>
+
+<button id="clearTasksButton" type="button"> Clear all tasks</button>
+
+</body>
+</html>
